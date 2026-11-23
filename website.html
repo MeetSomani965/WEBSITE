@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maheshwari Cafe – Café in Dewas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF7F1;--surface:#fff;--ink:#1B1410;--muted:#6B5D52;--green:#2A1A12;--berry:#C2570F;--gold:#E0A33A;--on-green:#FBF7F1;--on-berry:#fff;--line:#EADFD2;--sh:0 12px 32px rgba(42,26,18,.09);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120D0A;--surface:#1E1611;--ink:#F6EDE2;--muted:#B5A494;--green:#3A261A;--berry:#F0963F;--on-berry:#1A100A;--line:#32261D;--sh:0 12px 32px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#120D0A;--surface:#1E1611;--ink:#F6EDE2;--muted:#B5A494;--green:#3A261A;--berry:#F0963F;--on-berry:#1A100A;--line:#32261D;--sh:0 12px 32px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:"Instrument Sans","Noto Sans Devanagari",system-ui,sans-serif;line-height:1.6;font-size:17px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
+h1,h2,h3{font-family:"Bricolage Grotesque","Noto Sans Devanagari",system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.025em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.offerbar{background:#1B1410;color:#F6EDE2;text-align:center;padding:9px 16px;font-size:14.5px;font-weight:600}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;padding:10px 0}
+.navin{width:calc(100% - 24px);max-width:1056px;margin:0 auto;padding:8px 10px 8px 16px;border-radius:999px;background:color-mix(in srgb,var(--surface) 80%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--sh);display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:21px;text-decoration:none}
+.mark{width:40px;height:40px}.mark circle{fill:var(--green)}
+nav{display:flex;gap:4px;font-weight:600;font-size:15.5px}
+nav a{text-decoration:none;padding:8px 15px;border-radius:999px;transition:background .2s}
+nav a:hover{background:color-mix(in srgb,var(--berry) 14%,transparent)}
+nav a.on{background:var(--green);color:var(--on-green)}
+.tools{display:flex;gap:8px;align-items:center}
+.ib{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer}
+.ib:hover{border-color:var(--berry)}
+.burger{display:none;font-size:18px;line-height:1;padding:8px 12px}
+.btn{display:inline-block;background:var(--berry);color:var(--on-berry);padding:14px 28px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb,var(--berry) 35%,transparent);transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none;margin-left:10px}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;margin-top:6px;padding:clamp(28px,5vw,64px);border-radius:36px;background:radial-gradient(circle at 88% 12%,rgba(240,150,63,.38),transparent 46%),linear-gradient(135deg,#2A1A12,#4A2C1B);color:#FBF7F1}
+.hero h1{font-size:clamp(38px,6.2vw,80px);font-weight:800;line-height:1.14;padding-bottom:.08em;background:linear-gradient(180deg,#FFF4E4,#F0B36A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:46ch;color:#D9C8B6;font-size:19px;margin:20px 0 28px}
+.hero .btn.ghost{color:#FBF7F1;border-color:rgba(255,255,255,.45)}
+.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.trust span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 14px;font-size:14px;font-weight:600;color:#EADBC9}
+.hv{position:relative;min-height:490px;display:flex;align-items:flex-end}
+.orb{position:absolute;right:4px;top:0;width:200px;height:200px;border-radius:50%;padding:34px;background:radial-gradient(circle at 30% 28%,#F6B25E,#C2570F);box-shadow:0 30px 60px rgba(0,0,0,.4);animation:float 6s ease-in-out infinite}
+.mini{position:absolute;width:86px;height:86px;border-radius:50%;padding:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:float 5s ease-in-out infinite}
+.m1{left:92px;top:104px;animation-delay:-1.5s}.m2{left:6px;top:14px;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-14px)}}
+.chip{position:absolute;z-index:2;background:rgba(255,255,255,.95);color:#1B1410;border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.c1{left:-4px;top:198px}.c2{right:10px;bottom:-8px}
+.board{position:relative;z-index:1;width:92%;margin-top:210px;background:rgba(255,255,255,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:24px;animation:settle .9s .1s both cubic-bezier(.2,.8,.2,1)}
+@keyframes settle{from{transform:translateY(30px);opacity:0}}
+.board h3{font-size:22px;margin-bottom:10px;color:#FFF4E4}
+.board ul{list-style:none;margin:0;padding:0}
+.board li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.25)}
+.board li:last-child{border:0}
+.marquee{width:100vw;margin:56px 0 0 calc(50% - 50vw);border-block:1px solid var(--line);overflow:hidden;padding:16px 0}
+.track{display:flex;gap:44px;width:max-content;animation:slide 32s linear infinite;font:800 28px "Bricolage Grotesque",sans-serif}
+.track span::after{content:"✦";color:var(--berry);margin-left:44px}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:64px 0}
+section h2{font-size:clamp(32px,5vw,52px);margin-bottom:30px}
+section h2::after{content:"";display:block;width:56px;height:5px;border-radius:5px;background:var(--berry);margin-top:14px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.track,.board,.orb{animation:none}html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+.fav{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh);transition:transform .25s}
+.tile:hover{transform:translateY(-6px)}
+.tile .pic{height:170px;display:grid;place-items:center}
+.pic svg{width:118px;height:118px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.25))}
+.tile .tb{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tile h3{font-size:21px}.tile .meta{color:var(--muted);font-size:15px;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.add{background:var(--green);color:var(--on-green);border:0;border-radius:999px;padding:8px 18px;font:inherit;font-weight:700;cursor:pointer;transition:background .2s}
+.add:hover{background:var(--berry);color:var(--on-berry)}
+.ctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.ctl input[type=search],.ctl select{padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:inherit}
+.ctl input[type=search]{flex:1;min-width:200px}
+.chk{display:flex;align-items:center;gap:6px;font-weight:600}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding:5px;margin-bottom:20px;background:var(--surface);border:1px solid var(--line);border-radius:999px;width:fit-content;max-width:100%}
+.tab{border:0;background:transparent;color:var(--ink);padding:9px 20px;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--berry);color:var(--on-berry)}
+.items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.item{display:flex;justify-content:space-between;gap:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:22px;align-items:center;transition:transform .2s,box-shadow .2s}
+.item:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.item b{font-family:"Bricolage Grotesque","Noto Sans Devanagari",sans-serif;font-size:20px}
+.item .d{display:block;color:var(--muted);font-size:15px}
+.pr{display:flex;align-items:center;gap:10px;flex:none}.price{font-weight:800;font-size:18px}
+.vd{display:inline-block;width:14px;height:14px;border:2px solid #2E8B4F;border-radius:3px;margin-right:8px;position:relative;vertical-align:-1px}
+.vd::after{content:"";position:absolute;inset:2px;border-radius:50%;background:#2E8B4F}
+.tag{font-style:normal;font-size:12px;font-weight:700;background:var(--gold);color:#1B1410;border-radius:999px;padding:1px 9px;margin-left:8px}
+.tag.hot{background:var(--berry);color:var(--on-berry)}
+.empty{color:var(--muted);grid-column:1/-1}
+.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.offer{border-radius:26px;padding:30px;background:linear-gradient(135deg,#2A1A12,#5A3622);color:#FBF7F1;box-shadow:var(--sh)}
+.offer:nth-child(2){background:linear-gradient(135deg,#C2570F,#F0963F);color:#1B1410}
+.offer:nth-child(3){background:linear-gradient(135deg,#B8791A,#E8B04A);color:#1B1410}
+.offer h3{font-size:28px;margin-bottom:8px}.offer p{margin:0;font-weight:500}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:26px;max-width:640px;box-shadow:var(--sh)}
+.form label{display:block;font-weight:600;font-size:15px;margin-bottom:12px}
+.form label[hidden],.form[hidden],.fab[hidden],.btn[hidden]{display:none}
+.form input,.form select,.form textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:inherit}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.cart{margin-top:28px}.cart h3{font-size:26px;margin-bottom:8px}
+.line{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.line>span:first-child{flex:1;font-weight:500}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+.lp{min-width:64px;text-align:right;font-weight:600}
+.total{display:flex;justify-content:space-between;font-size:20px;padding:14px 0}
+.err{color:var(--berry);font-weight:600;margin:10px 0 0;min-height:1.2em}
+.upi{margin:0 0 14px;color:var(--muted);font-size:15px}
+.fab{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;box-shadow:0 10px 28px rgba(0,0,0,.3);white-space:nowrap}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.story p{color:var(--muted);margin:0 0 16px;max-width:52ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--sh)}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px}
+.facts dt{font-weight:600}.facts dd{margin:0;color:var(--muted)}
+.quick{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.quick .btn{padding:11px 20px;font-size:15px}.quick .btn.ghost{margin:0}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.rev{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;margin:0;box-shadow:var(--sh)}
+.rev p{margin:0 0 14px;font-size:18px}.rev cite{font-style:normal;font-weight:600;color:var(--muted)}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+footer{background:var(--green);color:var(--on-green);padding:48px 0;margin-top:40px;border-radius:36px 36px 0 0}
+footer .wrap{display:block}
+svg{display:block}
+.orb svg,.mini svg,.th svg{width:100%;height:100%}
+.steam{animation:steam 2.6s ease-in-out infinite}
+@keyframes steam{0%,100%{opacity:.25;transform:translateY(3px)}50%{opacity:.95;transform:translateY(-4px)}}
+.g-tea{background:linear-gradient(135deg,#C2570F,#F0963F)}.g-coffee{background:linear-gradient(135deg,#2A1A12,#6A4029)}
+.g-sandwich{background:linear-gradient(135deg,#5B6F4A,#8FA374)}.g-pizza{background:linear-gradient(135deg,#B8791A,#E8B04A)}
+.g-burger{background:linear-gradient(135deg,#9C3B1B,#E0763F)}.g-dessert{background:linear-gradient(135deg,#6B3A55,#B06A8B)}
+.th{flex:none;width:68px;height:68px;border-radius:20px;display:grid;place-items:center;padding:9px;overflow:hidden}
+.th:has(img){padding:0}.th img,.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.tx{flex:1;min-width:0}
+.steps,.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.step,.wc{padding:28px;border-radius:26px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--sh)}
+.step .n{font:800 60px "Bricolage Grotesque",sans-serif;color:var(--berry);opacity:.35;line-height:1}
+.step h3,.wc h3{font-size:22px;margin:8px 0 6px}.step p,.wc p{margin:0;color:var(--muted);font-size:16px}
+.ic{width:54px;height:54px;border-radius:17px;background:color-mix(in srgb,var(--berry) 16%,transparent);color:var(--berry);display:grid;place-items:center}
+.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.fl{font:800 28px "Bricolage Grotesque",sans-serif}
+.ft p{margin:8px 0 0;opacity:.8;max-width:30ch}
+.ftc{display:flex;flex-direction:column;gap:6px}.ftc b{margin-bottom:4px}
+.ftc a,.ftc span{opacity:.85;text-decoration:none}.ftc a:hover{opacity:1;text-decoration:underline}
+.copy{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);opacity:.75;font-size:14px}
+@media (max-width:780px){
+.ft{grid-template-columns:1fr}.m1{left:76px;top:84px}.m2{left:0;top:8px}.mini{width:70px;height:70px;padding:13px}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 124px)}
+.navin{flex-wrap:wrap;border-radius:28px;padding:8px 10px 8px 14px;row-gap:6px}
+nav{order:3;flex:1 0 100%;overflow-x:auto;gap:4px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{padding:8px 15px;white-space:nowrap;flex:none}
+.logo{font-size:17px}.mark{width:34px;height:34px}.tools .ib{padding:6px 10px}
+.hero,.story,.items{grid-template-columns:1fr}
+.hv{min-height:430px}.orb{width:170px;height:170px;padding:28px}.board{margin-top:170px;width:100%}.c1{top:164px}
+.btn.ghost{margin:10px 0 0}.g2{grid-template-columns:1fr}
+.item{flex-wrap:wrap}
+.pr{flex:1 0 100%;justify-content:space-between;border-top:1px dashed var(--line);padding-top:12px}
+.tag{display:inline-block;white-space:nowrap}
+}
+.chk input{accent-color:var(--berry);width:18px;height:18px}
+.faq{max-width:760px;display:grid;gap:12px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2px 22px}
+.qa summary{cursor:pointer;font-weight:700;font-size:18px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--berry);font-size:26px;line-height:1}
+.qa[open] summary::after{content:"−"}
+.qa p{margin:0 0 16px;color:var(--muted)}
+.prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:var(--berry);z-index:60}
+.toast{border:1px solid rgba(255,255,255,.18);position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#1B1410;color:#F6EDE2;padding:10px 20px;border-radius:999px;font-weight:600;z-index:50;transition:opacity .25s,transform .25s;max-width:90vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.totop{position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:var(--on-green);text-decoration:none;font-size:20px;font-weight:700;box-shadow:var(--sh);z-index:20;opacity:0;pointer-events:none;transition:opacity .25s}
+.totop.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="offerbar" data-i="bar"></div>
+<header class="nav"><div class="wrap navin">
+    <a class="logo" href="#top">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24"/><path d="M13 22h20v6a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8z" fill="#F4F7EA"/><path d="M33 24h2a4 4 0 0 1 0 8h-2" fill="none" stroke="#F4F7EA" stroke-width="2.5"/><path d="M19 17c-2-2 2-3 0-6M26 17c-2-2 2-3 0-6" fill="none" stroke="#F0963F" stroke-width="2" stroke-linecap="round"/></svg>
+      Maheshwari Cafe
+    </a>
+    <nav id="menuNav" aria-label="Main">
+      <a href="#top" data-i="nHome"></a><a href="#menu" data-i="nMenu"></a><a href="#offers" data-i="nOffers"></a><a href="#book" data-i="nBookS"></a><a href="#visit" data-i="nVisit"></a>
+    </nav>
+    <div class="tools">
+      <button class="ib" id="lang" aria-label="Change language"></button>
+      <button class="ib" id="theme" aria-label="Change theme"></button>
+      <button class="ib burger" id="burger" aria-expanded="false" aria-controls="menuNav" aria-label="Menu">☰</button>
+    </div>
+</div></header>
+<div class="wrap">
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1 data-i="heroH"></h1>
+        <p data-i="heroP"></p>
+        <a class="btn" href="#menu" data-i="btnMenu"></a><a class="btn ghost" href="#book" data-i="nBook"></a>
+        <div class="trust"><span data-i="t1"></span><span data-i="t2"></span></div>
+      </div>
+      <div class="hv"><div class="orb" id="orb" aria-hidden="true"></div><div class="mini m1" id="m1" aria-hidden="true"></div><div class="mini m2" id="m2" aria-hidden="true"></div><span class="chip c1">🌱 <span data-i="t0"></span></span><span class="chip c2">🕙 <span data-i="t3"></span></span>
+      <aside class="board">
+        <h3 data-i="boardH"></h3>
+        <ul><li><span>Masala kulhad chai</span><b>₹60</b></li><li><span>Hazelnut cold coffee</span><b>₹140</b></li><li><span>Paneer tikka pizza</span><b>₹279</b></li><li><span>Paneer burger</span><b>₹139</b></li></ul>
+      </aside></div>
+    </div>
+
+    <div class="marquee" aria-hidden="true"><div class="track"><span>Masala chai</span><span>Cold coffee</span><span>Grilled sandwich</span><span>Fresh pizza</span><span>Loaded burgers</span><span>Brownies</span><span>Masala chai</span><span>Cold coffee</span><span>Grilled sandwich</span><span>Fresh pizza</span><span>Loaded burgers</span><span>Brownies</span></div></div>
+
+    <section id="favourites"><h2 data-i="favH"></h2><div class="fav" id="fav"></div></section>
+
+    <section id="how"><h2 data-i="howH"></h2>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3 data-i="s1t"></h3><p data-i="s1d"></p></div>
+        <div class="step"><div class="n">02</div><h3 data-i="s2t"></h3><p data-i="s2d"></p></div>
+        <div class="step"><div class="n">03</div><h3 data-i="s3t"></h3><p data-i="s3d"></p></div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 data-i="menuH"></h2>
+      <div class="ctl">
+        <input type="search" id="q" data-ph="search" aria-label="Search">
+        <select id="mx" aria-label="Price"><option value="0" data-i="pAll"></option><option value="100" data-i="p100"></option><option value="200" data-i="p200"></option></select>
+        <label class="chk"><input type="checkbox" id="best"><span data-i="bestOnly"></span></label>
+      </div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="items" id="items"></div>
+
+      <div class="form cart" id="cart" hidden>
+        <h3 data-i="cartH"></h3>
+        <div id="cartList"></div>
+        <div class="total"><span data-i="total"></span><b id="cartTotal"></b></div>
+        <label><span data-i="lName"></span><input id="cName" autocomplete="name"></label>
+        <label><span data-i="lType"></span><select id="cType"><option value="Dine-in" data-i="dine"></option><option value="Takeaway" data-i="take"></option><option value="Delivery" data-i="deliv"></option></select></label>
+        <label id="addrBox" hidden><span data-i="lAddr"></span><textarea id="cAddr" rows="2"></textarea></label>
+        <label><span data-i="lNote"></span><input id="cNote"></label>
+        <label><span data-i="lPay"></span><select id="cPay"><option value="Pay at the cafe" data-i="payCafe"></option><option value="UPI" data-i="payUpi"></option></select></label>
+        <p class="upi" id="upiBox" hidden><a class="btn" id="upiBtn" href="#" data-i="upiPay"></a><br><span data-i="upiId"></span> <b id="upiId"></b></p>
+        <a class="btn" id="send" href="#" target="_blank" rel="noopener" data-i="send"></a>
+        <p class="err" id="err" role="alert"></p>
+      </div>
+      <button class="btn fab" id="fab" hidden></button>
+    </section>
+
+    <section id="offers"><h2 data-i="offH"></h2>
+      <div class="offers">
+        <div class="offer"><h3 data-i="o1t"></h3><p data-i="o1d"></p></div>
+        <div class="offer"><h3 data-i="o2t"></h3><p data-i="o2d"></p></div>
+        <div class="offer"><h3 data-i="o3t"></h3><p data-i="o3d"></p></div>
+      </div>
+    </section>
+
+    <section id="why"><h2 data-i="whyH"></h2>
+      <div class="why">
+        <div class="wc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h3 data-i="w1t"></h3><p data-i="w1d"></p></div>
+        <div class="wc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M12 20h.01"/></svg></div><h3 data-i="w2t"></h3><p data-i="w2d"></p></div>
+        <div class="wc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div><h3 data-i="w3t"></h3><p data-i="w3d"></p></div>
+        <div class="wc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3 data-i="w4t"></h3><p data-i="w4d"></p></div>
+      </div>
+    </section>
+
+    <section id="book"><h2 data-i="bookH"></h2>
+      <div class="form">
+        <p style="margin:0 0 16px;color:var(--muted)" data-i="bookP"></p>
+        <div class="g2">
+          <label><span data-i="bName"></span><input id="bName" autocomplete="name"></label>
+          <label><span data-i="bPhone"></span><input id="bPhone" type="tel" autocomplete="tel"></label>
+          <label><span data-i="bDate"></span><input id="bDate" type="date"></label>
+          <label><span data-i="bTime"></span><input id="bTime" type="time"></label>
+        </div>
+        <label><span data-i="bGuests"></span><select id="bGuests"><option>1</option><option>2</option><option selected>4</option><option>6</option><option>8</option><option>10</option></select></label>
+        <a class="btn" id="bSend" href="#" target="_blank" rel="noopener" data-i="bSend"></a>
+        <p class="err" id="bErr" role="alert"></p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="story">
+        <div><h2 data-i="abH"></h2><p data-i="ab1"></p><p data-i="ab2"></p></div>
+        <div class="facts" id="visit">
+          <h3 style="margin-bottom:16px" data-i="visitH"></h3>
+          <dl>
+            <dt data-i="lAdd"></dt><dd>12, AB Road, Dewas, Madhya Pradesh 455001</dd>
+            <dt data-i="lHrs"></dt><dd data-i="hrs"></dd>
+            <dt data-i="lPh"></dt><dd><a href="tel:+917878752339">+91 78787 52339</a></dd>
+            <dt>Instagram</dt><dd>@maheshwaricafe</dd>
+          </dl>
+          <div class="quick">
+            <a class="btn" href="tel:+917878752339" data-i="call"></a>
+            <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Maheshwari+Cafe+Dewas" target="_blank" rel="noopener" data-i="dir"></a>
+            <a class="btn ghost" href="https://wa.me/917878752339" target="_blank" rel="noopener" data-i="wa"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews"><h2 data-i="revH"></h2>
+      <div class="reviews">
+        <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p data-i="r1"></p><cite>Riya S.</cite></figure>
+        <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p data-i="r2"></p><cite>Aman J.</cite></figure>
+        <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p data-i="r3"></p><cite>Pooja M.</cite></figure>
+      </div>
+    </section>
+
+    <section id="faq"><h2 data-i="faqH"></h2>
+      <div class="faq">
+        <details class="qa"><summary data-i="q1"></summary><p data-i="a1"></p></details>
+        <details class="qa"><summary data-i="q2"></summary><p data-i="a2"></p></details>
+        <details class="qa"><summary data-i="q3"></summary><p data-i="a3"></p></details>
+        <details class="qa"><summary data-i="q4"></summary><p data-i="a4"></p></details>
+      </div>
+    </section>
+  </main>
+</div>
+<footer><div class="wrap">
+  <div class="ft">
+    <div><div class="fl">Maheshwari Cafe</div><p data-i="ftTag"></p></div>
+    <div class="ftc"><b data-i="nMenu"></b><a href="#menu" data-i="menuH"></a><a href="#offers" data-i="nOffers"></a><a href="#book" data-i="nBook"></a><a href="#reviews" data-i="revH"></a></div>
+    <div class="ftc"><b data-i="visitH"></b><a href="tel:+917878752339">+91 78787 52339</a><span>12, AB Road, Dewas, MP</span><span>@maheshwaricafe</span></div>
+  </div>
+  <div class="copy">© 2026 Maheshwari Cafe. Dewas, Madhya Pradesh</div>
+</div></footer>
+
+
+<div class="prog" id="prog"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a href="#top" class="totop" id="totop" aria-label="Back to top">↑</a>
+
+<script>
+const WA="917878752339",UPI="maheshwaricafe@upi",$=id=>document.getElementById(id);
+let lang="en",cat="tea";const cart={};
+const CATS=["tea","coffee","sandwich","pizza","burger","dessert"];
+const ITEMS=[
+["tea","Masala kulhad chai","Ginger, cardamom, black pepper","अदरक, इलायची, काली मिर्च",60,"b"],
+["tea","Adrak elaichi chai","Strong, with fresh ginger","कड़क, ताज़ा अदरक के साथ",50,""],
+["tea","Green tea","Light and refreshing","हल्की और ताज़गी भरी",70,""],
+["tea","Iced lemon tea","Chilled, with fresh mint","ठंडी, ताज़ा पुदीने के साथ",90,""],
+["coffee","Filter coffee","South Indian style, strong","साउथ इंडियन स्टाइल, कड़क",90,""],
+["coffee","Cappuccino","Double shot, steamed milk","डबल शॉट, गरम दूध",130,""],
+["coffee","Hazelnut cold coffee","Slow-brewed, 14 hours","14 घंटे धीमी ब्रू",140,"b"],
+["coffee","Cafe latte","Smooth, with creamy milk","मलाईदार दूध के साथ",120,""],
+["sandwich","Veg grilled sandwich","Cucumber, tomato, onion, green chutney","खीरा, टमाटर, प्याज़, हरी चटनी",90,""],
+["sandwich","Paneer tikka sandwich","Grilled paneer, mint chutney","ग्रिल्ड पनीर, पुदीना चटनी",140,"b"],
+["sandwich","Cheese corn sandwich","Sweet corn, melted cheese","स्वीट कॉर्न, पिघला चीज़",120,""],
+["sandwich","Veg club sandwich","Triple-decker, with fries","ट्रिपल-डेकर, फ्राइज़ के साथ",150,""],
+["pizza","Margherita pizza","Classic cheese and tomato","क्लासिक चीज़ और टमाटर",199,""],
+["pizza","Farmhouse pizza","Onion, capsicum, tomato, mushroom","प्याज़, शिमला मिर्च, टमाटर, मशरूम",249,""],
+["pizza","Paneer tikka pizza","Spicy paneer, onion, capsicum","मसालेदार पनीर, प्याज़, शिमला मिर्च",279,"bs"],
+["pizza","Peri-peri veg pizza","Peri-peri sauce, loaded veggies","पेरी-पेरी सॉस, ढेर सारी सब्ज़ियाँ",269,"s"],
+["burger","Aloo tikki burger","Crispy patty, lettuce, mayo","कुरकुरी टिक्की, सलाद, मेयो",89,"b"],
+["burger","Veg cheese burger","Veg patty with cheese slice","वेज पैटी और चीज़ स्लाइस",119,""],
+["burger","Paneer burger","Crispy paneer patty, mint mayo","कुरकुरा पनीर पैटी, मिंट मेयो",139,""],
+["burger","Peri-peri burger","Spicy patty, peri-peri sauce","तीखा पैटी, पेरी-पेरी सॉस",149,"s"],
+["dessert","Biscoff cheesecake","Baked in-house","कैफ़े में बना",160,""],
+["dessert","Brownie with ice cream","Warm, dark chocolate","गरम डार्क चॉकलेट",140,"b"],
+["dessert","Gulab jamun tart","Rabri on top","ऊपर से रबड़ी",120,""]];
+const ILL={
+tea:`<svg viewBox="0 0 120 120"><g class="steam" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="M46 30c-5-6 5-9 0-16"/><path d="M62 28c-5-6 5-9 0-16"/><path d="M78 30c-5-6 5-9 0-16"/></g><path d="M26 40H94L85 96Q83.5 105 75 105H45Q36.5 105 35 96Z" fill="#B5683A"/><path d="M26 40H94L91.5 57H28.5Z" fill="#8F4A25"/><ellipse cx="60" cy="40" rx="34" ry="8" fill="#6B3A1E"/><ellipse cx="60" cy="40" rx="29" ry="5.5" fill="#E8B77A"/><path d="M38 76H82" stroke="#8F4A25" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg>`,
+coffee:`<svg viewBox="0 0 120 120"><rect x="66" y="8" width="7" height="60" rx="3.5" fill="#F0963F" transform="rotate(14 69 38)"/><path d="M32 34H88L82 104Q81.500 110 75.500 110H44.500Q38.500 110 38 104Z" fill="#fff" fill-opacity=".22" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M36 64H84L81.200 104Q80.700 110 74.700 110H45.300Q39.300 110 38.800 104Z" fill="#5A3622"/><path d="M35 52H85L84 64H36Z" fill="#EBD5B3"/><rect x="48" y="72" width="13" height="13" rx="3" fill="#fff" fill-opacity=".35" transform="rotate(-10 54 78)"/><rect x="66" y="82" width="12" height="12" rx="3" fill="#fff" fill-opacity=".35" transform="rotate(12 72 88)"/></svg>`,
+sandwich:`<svg viewBox="0 0 120 120"><path d="M14 98L60 26L106 98Z" fill="#E3A857"/><path d="M27 98L60 46L93 98Z" fill="#F6E6BE"/><path d="M36 94L60 56L84 94Z" fill="#7DA060"/><path d="M46 90L60 68L74 90Z" fill="#D9473A"/><path d="M14 98H106" stroke="#C98A3A" stroke-width="6" stroke-linecap="round"/></svg>`,
+pizza:`<svg viewBox="0 0 120 120"><path d="M60 110L18 38Q60 16 102 38Z" fill="#F2C14E"/><path d="M18 38Q60 16 102 38" fill="none" stroke="#C98A3A" stroke-width="11" stroke-linecap="round"/><circle cx="52" cy="54" r="7" fill="#C2402A"/><circle cx="74" cy="58" r="6" fill="#C2402A"/><circle cx="60" cy="80" r="6.500" fill="#C2402A"/><circle cx="44" cy="70" r="3.500" fill="#3E6B3A"/><circle cx="72" cy="76" r="3.500" fill="#3E6B3A"/></svg>`,
+burger:`<svg viewBox="0 0 120 120"><path d="M22 56a38 28 0 0 1 76 0Z" fill="#E3A857"/><g fill="#FBE9CC"><ellipse cx="46" cy="40" rx="3.500" ry="2"/><ellipse cx="62" cy="34" rx="3.500" ry="2"/><ellipse cx="76" cy="42" rx="3.500" ry="2"/><ellipse cx="56" cy="48" rx="3.500" ry="2"/></g><path d="M16 60q6.500 9 13 0t13 0 13 0 13 0 13 0 13 0 10 0v5H16Z" fill="#7DA060"/><rect x="20" y="66" width="80" height="13" rx="6.500" fill="#6B3A22"/><path d="M22 79H98L90 88L80 82L70 88L60 82L50 88L40 82L30 88Z" fill="#F2C14E"/><path d="M24 90H96V93A12 12 0 0 1 84 105H36A12 12 0 0 1 24 93Z" fill="#E3A857"/></svg>`,
+dessert:`<svg viewBox="0 0 120 120"><path d="M60 60L102 76L60 92L18 76Z" fill="#8A5636"/><path d="M18 76L60 92V112L18 96Z" fill="#5A3622"/><path d="M60 92L102 76V96L60 112Z" fill="#3E2416"/><circle cx="60" cy="54" r="19" fill="#FBE9CC"/><path d="M43 60Q60 74 77 60" fill="none" stroke="#F0CFA0" stroke-width="5" stroke-linecap="round"/><circle cx="60" cy="31" r="5.500" fill="#C2402A"/></svg>`};
+const PHOTOS={}; // optional: "Item name":"photo-url" to show real photos
+const th=(n,c)=>PHOTOS[n]?`<img src="${PHOTOS[n]}" alt="${n}" loading="lazy">`:ILL[c];
+const FAV=["Masala kulhad chai","Paneer tikka pizza","Paneer burger","Paneer tikka sandwich"];
+const T={en:{
+nHome:"Home",nBookS:"Book",added:"added to your order",
+faqH:"Good to know",q1:"Do you deliver?",a1:"Yes, we deliver nearby. Choose Delivery while ordering and add your address.",q2:"Do I need to book a table?",a2:"Not always. Walk-ins are welcome, but booking helps on weekends and for groups.",q3:"How can I pay?",a3:"Pay at the café in cash or UPI, or choose UPI while ordering.",q4:"Is the food pure vegetarian?",a4:"Yes, our whole menu and kitchen are 100% vegetarian.",
+howH:"How ordering works",s1t:"Pick your items",s1d:"Browse the menu and tap Add.",s2t:"Send on WhatsApp",s2d:"One tap sends your order to us.",s3t:"Sit back and enjoy",s3d:"We confirm, prepare it fresh and serve it hot.",
+whyH:"Why Maheshwari Cafe",w1t:"100% pure veg",w1d:"Every dish is cooked in a fully vegetarian kitchen.",w2t:"Free Wi-Fi",w2d:"Work, study or just scroll in peace.",w3t:"Easy ordering",w3d:"Order or book a table in seconds on WhatsApp.",w4t:"Open late",w4d:"Every day until 11 pm.",ftTag:"Chai, coffee and good company in Dewas.",
+bar:"Today’s offer: burger + cold coffee combo for ₹199",nMenu:"Menu",nOffers:"Offers",nBook:"Book a table",nVisit:"Visit",
+heroH:"Chai, coffee and a table that waits for you.",heroP:"A pure veg café in Dewas. Kulhad chai, fresh coffee, pizzas, burgers and sandwiches made to order.",btnMenu:"See the menu",
+t0:"100% pure veg",t1:"Free Wi-Fi",t2:"Dine-in, takeaway & delivery",t3:"Open till 11 pm",boardH:"Today’s board",favH:"Customer favourites",add:"Add",
+menuH:"Menu",search:"Search the menu",pAll:"All prices",p100:"Under ₹100",p200:"Under ₹200",bestOnly:"Bestsellers only",empty:"No items match. Try another word or price.",
+c_tea:"Tea",c_coffee:"Coffee",c_sandwich:"Sandwich",c_pizza:"Pizzas",c_burger:"Burger",c_dessert:"Desserts",veg:"Pure veg",tagB:"Bestseller",tagS:"Spicy",
+cartH:"Your order",total:"Total",lName:"Your name",lType:"Order type",dine:"Dine-in",take:"Takeaway",deliv:"Delivery",lAddr:"Delivery address",lNote:"Note for the kitchen (optional)",lPay:"Payment",payCafe:"Pay at the café",payUpi:"Pay with UPI",
+send:"Send order on WhatsApp",upiPay:"Pay with UPI",upiId:"UPI ID:",eName:"Please enter your name.",eAddr:"Please enter your delivery address.",view:"View order",items:"items",
+offH:"Offers",o1t:"Combo deal",o1d:"Any burger with a cold coffee for ₹199.",o2t:"Happy hours",o2d:"3 pm to 6 pm: 20% off on tea and coffee.",o3t:"Free brownie",o3d:"With every order above ₹500.",
+bookH:"Book a table",bookP:"Send your details and we’ll confirm on WhatsApp.",bName:"Your name",bPhone:"Phone number",bDate:"Date",bTime:"Time",bGuests:"Guests",bSend:"Request booking on WhatsApp",eBook:"Please fill in all the details.",
+abH:"Small place, slow mornings.",ab1:"We opened Maheshwari Cafe because Dewas deserved a café where chai is taken as seriously as coffee. Every kulhad is hand-made by a local potter, and every bean is roasted within two weeks of landing in your cup.",ab2:"Bring a book, a laptop or your whole family. Wi-Fi is free and nobody rushes you.",
+visitH:"Visit us",lAdd:"Address",lHrs:"Hours",lPh:"Phone",hrs:"Every day, 8 am – 11 pm",call:"Call now",dir:"Get directions",wa:"WhatsApp us",
+revH:"What our guests say",r1:"Best masala chai in Dewas. We come here every evening after work.",r2:"Calm place, fast Wi-Fi, and the paneer burger is really good.",r3:"Ordered a pizza on WhatsApp and it was ready in 20 minutes."},
+hi:{
+nHome:"होम",nBookS:"बुकिंग",added:"आपके ऑर्डर में जुड़ गया",
+faqH:"ज़रूरी जानकारी",q1:"क्या आप डिलीवरी करते हैं?",a1:"हाँ, आसपास के इलाके में डिलीवरी होती है। ऑर्डर करते समय डिलीवरी चुनें और पता लिखें।",q2:"क्या टेबल बुक करना ज़रूरी है?",a2:"ज़रूरी नहीं। सीधे आ सकते हैं, लेकिन वीकेंड और ग्रुप के लिए बुकिंग बेहतर है।",q3:"पेमेंट कैसे करें?",a3:"कैफ़े में कैश या UPI से, या ऑर्डर करते समय UPI चुनें।",q4:"क्या खाना पूरी तरह शाकाहारी है?",a4:"हाँ, हमारा पूरा मेन्यू और किचन 100% शाकाहारी है।",
+howH:"ऑर्डर कैसे करें",s1t:"अपनी पसंद चुनें",s1d:"मेन्यू देखें और ‘जोड़ें’ दबाएँ।",s2t:"WhatsApp पर भेजें",s2d:"एक टैप में आपका ऑर्डर हम तक पहुँच जाता है।",s3t:"आराम से इंतज़ार करें",s3d:"हम कन्फर्म करके ताज़ा और गरमागरम परोसते हैं।",
+whyH:"Maheshwari Cafe ही क्यों",w1t:"100% शुद्ध शाकाहारी",w1d:"हर व्यंजन पूरी तरह शाकाहारी रसोई में बनता है।",w2t:"फ्री Wi-Fi",w2d:"आराम से काम करें, पढ़ें या बस घूमें।",w3t:"आसान ऑर्डर",w3d:"WhatsApp पर कुछ सेकंड में ऑर्डर करें या टेबल बुक करें।",w4t:"देर रात तक खुला",w4d:"रोज़ रात 11 बजे तक।",ftTag:"देवास में चाय, कॉफ़ी और अच्छा साथ।",
+bar:"आज का ऑफर: बर्गर + कोल्ड कॉफ़ी कॉम्बो सिर्फ़ ₹199",nMenu:"मेन्यू",nOffers:"ऑफर",nBook:"टेबल बुक करें",nVisit:"हमसे मिलें",
+heroH:"चाय, कॉफ़ी और आपका इंतज़ार करती एक टेबल।",heroP:"देवास का प्योर वेज कैफ़े। कुल्हड़ चाय, ताज़ा कॉफ़ी, पिज़्ज़ा, बर्गर और सैंडविच, आपके ऑर्डर पर ताज़ा बने।",btnMenu:"मेन्यू देखें",
+t0:"100% शुद्ध शाकाहारी",t1:"फ्री Wi-Fi",t2:"डाइन-इन, टेकअवे और डिलीवरी",t3:"रात 11 बजे तक खुला",boardH:"आज का बोर्ड",favH:"ग्राहकों की पसंद",add:"जोड़ें",
+menuH:"मेन्यू",search:"मेन्यू में खोजें",pAll:"सभी कीमतें",p100:"₹100 से कम",p200:"₹200 से कम",bestOnly:"सिर्फ़ बेस्टसेलर",empty:"कोई आइटम नहीं मिला। दूसरा शब्द या कीमत आज़माएँ।",
+c_tea:"चाय",c_coffee:"कॉफ़ी",c_sandwich:"सैंडविच",c_pizza:"पिज़्ज़ा",c_burger:"बर्गर",c_dessert:"मिठाई",veg:"शाकाहारी",tagB:"बेस्टसेलर",tagS:"तीखा",
+cartH:"आपका ऑर्डर",total:"कुल",lName:"आपका नाम",lType:"ऑर्डर का तरीका",dine:"यहीं बैठकर",take:"टेकअवे",deliv:"डिलीवरी",lAddr:"डिलीवरी का पता",lNote:"किचन के लिए नोट (वैकल्पिक)",lPay:"पेमेंट",payCafe:"कैफ़े में पेमेंट",payUpi:"UPI से पेमेंट",
+send:"WhatsApp पर ऑर्डर भेजें",upiPay:"UPI से पेमेंट करें",upiId:"UPI ID:",eName:"कृपया अपना नाम लिखें।",eAddr:"कृपया डिलीवरी का पता लिखें।",view:"ऑर्डर देखें",items:"आइटम",
+offH:"ऑफर",o1t:"कॉम्बो ऑफर",o1d:"कोई भी बर्गर और कोल्ड कॉफ़ी सिर्फ़ ₹199 में।",o2t:"हैप्पी आवर्स",o2d:"दोपहर 3 से शाम 6 बजे: चाय और कॉफ़ी पर 20% छूट।",o3t:"फ्री ब्राउनी",o3d:"₹500 से ऊपर के हर ऑर्डर पर।",
+bookH:"टेबल बुक करें",bookP:"अपनी जानकारी भेजें, हम WhatsApp पर कन्फर्म करेंगे।",bName:"आपका नाम",bPhone:"फ़ोन नंबर",bDate:"तारीख़",bTime:"समय",bGuests:"मेहमान",bSend:"WhatsApp पर बुकिंग भेजें",eBook:"कृपया सारी जानकारी भरें।",
+abH:"छोटी जगह, इत्मीनान भरी सुबहें।",ab1:"हमने Maheshwari Cafe इसलिए शुरू किया क्योंकि देवास को ऐसा कैफ़े चाहिए था जहाँ चाय को कॉफ़ी जितनी अहमियत मिले। हर कुल्हड़ स्थानीय कुम्हार के हाथ का बना है और हर बीन आपके कप तक पहुँचने के दो हफ़्ते के अंदर रोस्ट होती है।",ab2:"किताब, लैपटॉप या पूरा परिवार साथ लाइए। Wi-Fi फ्री है और यहाँ कोई जल्दी नहीं मचाता।",
+visitH:"हमसे मिलें",lAdd:"पता",lHrs:"समय",lPh:"फ़ोन",hrs:"रोज़ सुबह 8 – रात 11 बजे",call:"अभी कॉल करें",dir:"रास्ता देखें",wa:"WhatsApp करें",
+revH:"हमारे मेहमान क्या कहते हैं",r1:"देवास की सबसे बढ़िया मसाला चाय। हम रोज़ शाम काम के बाद यहीं आते हैं।",r2:"शांत जगह, तेज़ Wi-Fi और पनीर बर्गर बहुत बढ़िया है।",r3:"WhatsApp पर पिज़्ज़ा ऑर्डर किया और 20 मिनट में तैयार मिला।"}};
+const t=k=>T[lang][k]||k;
+
+function renderFav(){
+  $("fav").innerHTML=FAV.map(n=>{const i=ITEMS.find(x=>x[1]===n);return `<article class="tile"><div class="pic g-${i[0]}" aria-hidden="true">${th(n,i[0])}</div><div class="tb"><h3>${n}</h3><div class="meta">${lang==="hi"?i[3]:i[2]}</div><div class="row"><b>₹${i[4]}</b><button class="add" data-n="${n}" data-p="${i[4]}">${t("add")}</button></div></div></article>`}).join("");
+}
+function renderMenu(){
+  $("tabs").innerHTML=CATS.map(c=>`<button class="tab" role="tab" aria-selected="${c===cat}" data-c="${c}">${t("c_"+c)}</button>`).join("");
+  const q=$("q").value.trim().toLowerCase(),mx=Number($("mx").value),best=$("best").checked;
+  const list=ITEMS.filter(i=>(q?(i[1]+i[2]+i[3]).toLowerCase().includes(q):i[0]===cat)&&(!mx||i[4]<=mx)&&(!best||i[5].includes("b")));
+  $("items").innerHTML=list.length?list.map(i=>`<div class="item"><div class="th g-${i[0]}" aria-hidden="true">${th(i[1],i[0])}</div><div class="tx"><span class="vd" title="${t("veg")}"></span><b>${i[1]}</b>${i[5].includes("b")?`<em class="tag">${t("tagB")}</em>`:""}${i[5].includes("s")?`<em class="tag hot">${t("tagS")}</em>`:""}<span class="d">${lang==="hi"?i[3]:i[2]}</span></div><div class="pr"><span class="price">₹${i[4]}</span><button class="add" data-n="${i[1]}" data-p="${i[4]}">${t("add")}</button></div></div>`).join(""):`<p class="empty">${t("empty")}</p>`;
+}
+function totals(){let s=0,c=0;Object.keys(cart).forEach(k=>{s+=cart[k].q*cart[k].p;c+=cart[k].q});return{s,c}}
+function renderCart(){
+  const keys=Object.keys(cart),{s,c}=totals();
+  $("cart").hidden=!keys.length;$("fab").hidden=!keys.length;
+  $("cartList").innerHTML=keys.map(k=>`<div class="line"><span>${k}</span><span class="qty"><button aria-label="−" data-n="${k}" data-d="-1">−</button><b>${cart[k].q}</b><button aria-label="+" data-n="${k}" data-d="1">+</button></span><span class="lp">₹${cart[k].q*cart[k].p}</span></div>`).join("");
+  $("cartTotal").textContent="₹"+s;
+  try{localStorage.setItem("mc-cart",JSON.stringify(cart))}catch(e){}
+  $("fab").textContent=`${t("view")} · ${c} ${c===1&&lang==="en"?"item":t("items")} · ₹${s}`;
+  const upi=$("cPay").value==="UPI";
+  $("upiBox").hidden=!upi;$("upiId").textContent=UPI;
+  $("upiBtn").href=`upi://pay?pa=${UPI}&pn=Maheshwari%20Cafe&am=${s}&cu=INR&tn=Cafe%20order`;
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
+  document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+  $("lang").textContent=lang==="en"?"हिंदी":"English";
+  renderMenu();renderFav();renderCart();
+}
+function curTheme(){return document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function setTheme(v){document.documentElement.dataset.theme=v;$("theme").textContent=v==="dark"?"☀":"☾";try{localStorage.setItem("mc-theme",v)}catch(e){}}
+$("theme").onclick=()=>setTheme(curTheme()==="dark"?"light":"dark");
+$("lang").onclick=()=>{lang=lang==="en"?"hi":"en";try{localStorage.setItem("mc-lang",lang)}catch(e){}applyLang()};
+
+let toastT;function showToast(m){const el=$("toast");el.textContent=m;el.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove("show"),1800)}
+document.addEventListener("click",e=>{
+  const a=e.target.closest(".add");
+  if(a){const n=a.dataset.n;cart[n]=cart[n]||{q:0,p:Number(a.dataset.p)};cart[n].q++;renderCart();showToast(n+" · "+t("added"));a.textContent="✓";setTimeout(()=>{a.textContent=t("add")},900)}
+});
+$("cartList").onclick=e=>{const b=e.target.closest("button");if(!b)return;const n=b.dataset.n;cart[n].q+=Number(b.dataset.d);if(cart[n].q<1)delete cart[n];renderCart()};
+$("tabs").onclick=e=>{const b=e.target.closest("button");if(b){cat=b.dataset.c;$("q").value="";renderMenu()}};
+["q","mx","best"].forEach(id=>$(id).oninput=renderMenu);
+$("fab").onclick=()=>$("cart").scrollIntoView({behavior:"smooth",block:"center"});
+$("cType").onchange=()=>{$("addrBox").hidden=$("cType").value!=="Delivery"};
+$("cPay").onchange=renderCart;
+
+$("send").onclick=e=>{
+  const name=$("cName").value.trim(),type=$("cType").value,addr=$("cAddr").value.trim(),note=$("cNote").value.trim(),pay=$("cPay").value,err=$("err");
+  if(!name){e.preventDefault();err.textContent=t("eName");$("cName").focus();return}
+  if(type==="Delivery"&&!addr){e.preventDefault();err.textContent=t("eAddr");$("cAddr").focus();return}
+  err.textContent="";
+  const lines=Object.keys(cart).map(k=>`• ${cart[k].q} x ${k} - ₹${cart[k].q*cart[k].p}`).join("\n");
+  const msg=`Hello Maheshwari Cafe, I want to place an order.\n\n${lines}\n\nTotal: ₹${totals().s}\nName: ${name}\nOrder type: ${type}\nPayment: ${pay}`+(type==="Delivery"?`\nAddress: ${addr}`:"")+(note?`\nNote: ${note}`:"");
+  $("send").href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+};
+$("bSend").onclick=e=>{
+  const n=$("bName").value.trim(),p=$("bPhone").value.trim(),d=$("bDate").value,tm=$("bTime").value,g=$("bGuests").value;
+  if(!n||p.replace(/\D/g,"").length<10||!d||!tm){e.preventDefault();$("bErr").textContent=t("eBook");return}
+  $("bErr").textContent="";
+  const msg=`Hello Maheshwari Cafe, I want to book a table.\nName: ${n}\nPhone: ${p}\nDate: ${d}\nTime: ${tm}\nGuests: ${g}`;
+  $("bSend").href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+};
+
+$("burger").onclick=()=>{const o=$("menuNav").classList.toggle("open");$("burger").setAttribute("aria-expanded",String(o));$("burger").textContent=o?"✕":"☰"};
+const navLinks=[...document.querySelectorAll("#menuNav a")];
+navLinks.forEach(a=>a.addEventListener("click",()=>{$("menuNav").classList.remove("open");$("burger").setAttribute("aria-expanded","false");$("burger").textContent="☰"}));
+const centerOn=()=>{const a=document.querySelector("#menuNav a.on"),n=$("menuNav");if(a&&n.scrollWidth>n.clientWidth)n.scrollTo({left:n.scrollLeft+a.getBoundingClientRect().left-n.getBoundingClientRect().left-16,behavior:"smooth"})};
+const spy=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){navLinks.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+en.target.id));centerOn()}}),{rootMargin:"-45% 0px -50% 0px"});
+["menu","offers","book","visit"].forEach(id=>{const el=$(id);if(el)spy.observe(el)});
+const setHome=()=>{if(scrollY<240){navLinks.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#top"));centerOn()}};
+addEventListener("scroll",setHome,{passive:true});setHome();
+const onScroll=()=>{const h=document.documentElement.scrollHeight-innerHeight;$("prog").style.width=(h>0?scrollY/h*100:0)+"%";$("totop").classList.toggle("show",scrollY>700)};
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+const rvObs=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");rvObs.unobserve(en.target)}}),{threshold:.06});
+document.querySelectorAll("main section").forEach(sc=>{sc.classList.add("rv");rvObs.observe(sc)});
+$("bDate").min=new Date().toISOString().slice(0,10);
+try{const th=localStorage.getItem("mc-theme");if(th)document.documentElement.dataset.theme=th;const lg=localStorage.getItem("mc-lang");if(lg)lang=lg}catch(e){}
+try{const sv=JSON.parse(localStorage.getItem("mc-cart")||"{}");Object.keys(sv).forEach(k=>{const it=ITEMS.find(x=>x[1]===k);if(it&&sv[k].q>0)cart[k]={q:Math.min(99,Number(sv[k].q)||1),p:it[4]}})}catch(e){}
+$("orb").innerHTML=ILL.tea;$("m1").innerHTML=ILL.pizza;$("m2").innerHTML=ILL.burger;
+setTheme(curTheme());applyLang();
+</script>
+</body>
+</html>
